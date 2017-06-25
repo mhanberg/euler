@@ -2,7 +2,7 @@ require_relative 'euler_helper'
 start = Time.now
 ################
 
-answer = Prime.first(10001).last
+answer = Prime.first(10_001).last
 
 #################
 finish = Time.now

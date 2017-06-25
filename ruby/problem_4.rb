@@ -1,6 +1,6 @@
 require_relative 'euler_helper'
 
-def palindrome? n
+def palindrome?(n)
   n = n.to_s
 
   n == n.reverse
@@ -8,13 +8,11 @@ end
 
 @palindromes = []
 
-(100..999).each do |i| 
+(100..999).each do |i|
   (100..999).each do |j|
     product = i * j
 
-    if palindrome?(product)
-      @palindromes << product
-    end
+    @palindromes << product if palindrome?(product)
   end
 end
 

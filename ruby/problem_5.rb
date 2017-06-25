@@ -3,20 +3,18 @@ start = Time.now
 answer = 2520
 done = false
 
-def divisible_by_1_to_20 n
+def divisible_by_1_to_20(n)
   (1..20).each do |i|
-    if n % i != 0
-      return false
-    end
+    return false if n % i != 0
   end
-  return true
+  true
 end
 
-until done do
+until done
   done = divisible_by_1_to_20(answer)
-  answer = answer + 1 unless done
-  if answer % 2 != 0
-    answer = answer + 1 unless done
+  answer += 1 unless done
+  if answer.odd?
+    answer += 1 unless done
   end
 end
 finish = Time.now
