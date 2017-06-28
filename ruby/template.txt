@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+require_relative 'euler_helper'
+start = Time.now
+answer = nil
+################
+
+#################
+finish = Time.now
+
+EulerHelper.print_duration(start: start, finish: finish)
+EulerHelper.print_answer answer
